@@ -5,9 +5,10 @@
   "main": "scripts.js",
   "scripts": {
     "start": "node scripts.js",
-    "build": "echo \"Build script executed successfully\" && mkdir -p public && cp -r !(public) public",
+    "build": "echo \"Build script executed successfully\" && mkdir -p public && rsync -av --exclude public ./ public",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
